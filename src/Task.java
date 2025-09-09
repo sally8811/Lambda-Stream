@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 
-public class Task {
 	public class Task implements Comparable<Task> {
 	    private LocalDate date;
 	    private String task;
@@ -36,5 +35,5 @@ public class Task {
 		public String toString() {
 			return this.date + " " + this.task;
 		}
-	}
+	
 }

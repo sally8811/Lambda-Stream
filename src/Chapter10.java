@@ -1,10 +1,9 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Chapter10 {
-
-	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		public class Chapter10 {
 		    public static void main(String[] args) throws Exception {
 		        List<Task> list = new ArrayList<>();
 		        list.add(new Task(LocalDate.of(2021, 10, 21), "牛乳を買う", true));
@@ -15,19 +14,19 @@ public class Chapter10 {
 
 		        // 以下記述
 		        
-		        list.stream()
+		        long k=list.stream()
 		              .filter(t -> !t.isDone())
 		              .count();
-		        System.out.println("未完了のタスクの個数は" + );
+		        System.out.println("未完了のタスクの個数は" + k);
 		        
 		        
 		        System.out.println("【未完了のタスクを昇順に並び替えて一覧表示】");
 		        list.stream()
-		            .filter(t -> !isDone())
+		            .filter(t -> !t.isDone())
 		            .sorted()
-		            
-		    }
-		}
+		            .map(Task::toString)
+		            .forEach(System.out::println);
+		    
 
 	}
 
