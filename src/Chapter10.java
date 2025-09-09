@@ -24,7 +24,6 @@ public class Chapter10 {
 		        list.stream()
 		            .filter(t -> !t.isDone())
 		            .sorted()
-		            .map(Task::toString)
 		            .forEach(System.out::println);
 		    
 
